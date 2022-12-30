@@ -1,0 +1,23 @@
+.navContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr 0.5fr;
+}
+
+.navContainer span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.navContainer span i {
+    font-size: 2rem;
+}
+
+.navContainer :first-child {
+    justify-content: left;
+}
+
+.navContainer span input {
+    width: 75%;
+}

@@ -7,7 +7,7 @@ const Banner = () => {
             <div className={styles.bannerText}>
                 <h1>Todo lo que necesitas, en un solo lugar</h1>
                 <p>
-                    Compra de la manera más simple en Comercio Conectado. Cientos de productos al alcance de tu mano en una sola página. Simple, rapido, Comercio Conectado.
+                    Compra de la manera más simple en Comercio Conectado. Cientos de productos al alcance de tu mano en una sola página. Simple, rápido, Comercio Conectado.
                 </p>
             </div>
         </header>
