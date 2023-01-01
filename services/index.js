@@ -37,3 +37,24 @@ export const getFeaturedBrands = async () => {
 
     return result.brands;
 };
+
+export const getFeaturedProducts = async () => {
+    const query = gql`
+        query FeaturedProducts {
+            products(where: {isFeatured: true}) {
+                isOnSale
+                mainPhoto {
+                    url
+                }
+                name
+                price
+                salePrice
+                slug
+            }
+        }
+    `
+
+    const result = await request(graphqlAPI, query);
+
+    return result.products;
+};
