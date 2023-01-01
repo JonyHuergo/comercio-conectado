@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { Banner, Navbar } from '../components'
-import { getFeaturedCategories } from '../services'
+import { getFeaturedCategories, getFeaturedBrands } from '../services'
 
-export default function Home({ categories }) {
+export default function Home({ categories, brands }) {
   return (
     <>
       <Head>
@@ -22,8 +22,9 @@ export default function Home({ categories }) {
 
 export async function getStaticProps() {
   const categories = (await getFeaturedCategories()) || [];
+  const brands = (await getFeaturedBrands()) || [];
 
   return {
-    props: { categories }
+    props: { categories, brands }
   }
 }

@@ -19,3 +19,21 @@ export const getFeaturedCategories = async () => {
 
     return result.categories;
 };
+
+export const getFeaturedBrands = async () => {
+    const query = gql`
+        query FeaturedBrands {
+            brands(where: {isFeatured: true}) {
+                name
+                slug
+                logo {
+                    url
+                }
+            }
+        }
+    `
+
+    const result = await request(graphqlAPI, query);
+
+    return result.brands;
+};
