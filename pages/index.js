@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Banner, Navbar } from '../components'
+import { Banner, Navbar, FeaturedProducts } from '../components'
 import { getFeaturedCategories, getFeaturedBrands, getFeaturedProducts } from '../services'
 
 export default function Home({ categories, brands, products }) {
@@ -15,6 +15,7 @@ export default function Home({ categories, brands, products }) {
       <main className={styles.main}>
         <Navbar/>
         <Banner/>
+        <FeaturedProducts products={products}/>
       </main>
     </>
   )
