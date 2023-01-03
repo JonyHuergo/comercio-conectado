@@ -58,3 +58,62 @@ export const getFeaturedProducts = async () => {
 
     return result.products;
 };
+
+export const getProducts = async () => {
+    const query = gql`
+        query Products {
+            productsConnection {
+                edges {
+                    node {
+                        slug
+                    }
+                }
+            }
+        }
+    `
+
+    const result = await request(graphqlAPI, query);
+
+    return result.productsConnection.edges;
+};
+
+export const getProductDetails = async (slug) => {
+  const query = gql`
+    query ProductDetails($slug : String!) {
+      product(where: {slug: $slug}) {
+        brand {
+            name
+            logo {
+                url
+            }
+            slug
+        }
+        category {
+            name
+            slug
+            }
+        description
+        isOnSale
+        mainPhoto {
+            url
+        }
+        name
+        photos {
+            url    
+        }
+        price
+        reviews {
+            content
+            name
+            rating
+        }
+        salePrice
+        slug
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug });
+
+  return result.product;
+};
