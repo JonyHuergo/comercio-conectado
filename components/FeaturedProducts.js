@@ -16,7 +16,7 @@ const FeaturedProducts = ({ products }) => {
       <h2>Productos Destacados</h2>
       <div className={styles.emblaContainer}>
         {products.map( product => (
-          <Link href={`./product/${product.slug}`}>
+          <Link href={`./product/${product.slug}`} key={product.id}>
           <div className={styles.emblaSlide}>
             <div className={styles.emblaSlideImage}>
               <img src={product.mainPhoto.url} alt={product.name} className={styles.emblaSlideImg}/>

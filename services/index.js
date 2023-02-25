@@ -42,6 +42,7 @@ export const getFeaturedProducts = async () => {
     const query = gql`
         query FeaturedProducts {
             products(where: {isFeatured: true}) {
+                id
                 isOnSale
                 mainPhoto {
                     url
