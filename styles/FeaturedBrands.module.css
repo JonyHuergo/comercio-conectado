@@ -1,0 +1,27 @@
+.brandsSection {
+    padding: 0px 0px 20px;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    height: fit-content;
+}
+
+.brands {
+    display: grid;
+    grid: auto / auto auto auto auto;
+}
+
+.brandContainer {
+    height: auto;
+    margin: 30px auto 0 auto;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.brandName {
+    text-align: center;
+}

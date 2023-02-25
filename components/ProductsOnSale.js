@@ -13,7 +13,7 @@ const ProductsOnSale = ({ products }) => {
     <>
     
     <div className={styles.embla} ref={emblaRef}>
-      <h2>Descuentos</h2>
+      <h2>Ofertas</h2>
       <div className={styles.emblaContainer}>
         {products.map( product => (
           <Link href={`./product/${product.slug}`} key={product.id}>
