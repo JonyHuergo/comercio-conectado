@@ -117,3 +117,24 @@ export const getProductDetails = async (slug) => {
 
   return result.product;
 };
+
+export const getProductsOnSale = async () => {
+    const query = gql`
+        query ProductsOnSale {
+            products(where: {isOnSale: true}) {
+                id
+                mainPhoto {
+                    url
+                }
+                name
+                price
+                salePrice
+                slug
+            }
+        }
+    `
+
+    const result = await request(graphqlAPI, query);
+
+    return result.products;
+};

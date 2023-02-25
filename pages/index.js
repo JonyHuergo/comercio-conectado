@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Banner, Navbar, FeaturedProducts } from '../components'
-import { getFeaturedCategories, getFeaturedBrands, getFeaturedProducts } from '../services'
+import { Banner, Navbar, FeaturedProducts, ProductsOnSale } from '../components'
+import { getFeaturedCategories, getFeaturedBrands, getFeaturedProducts, getProductsOnSale } from '../services'
 
-export default function Home({ categories, brands, products }) {
+export default function Home({ categories, brands, featuredProducts, productsOnSale }) {
   return (
     <>
       <Head>
@@ -15,7 +15,8 @@ export default function Home({ categories, brands, products }) {
       <main className={styles.main}>
         <Navbar/>
         <Banner/>
-        <FeaturedProducts products={products}/>
+        <FeaturedProducts products={featuredProducts}/>
+        <ProductsOnSale products={productsOnSale}/>
       </main>
     </>
   )
@@ -24,9 +25,10 @@ export default function Home({ categories, brands, products }) {
 export async function getStaticProps() {
   const categories = (await getFeaturedCategories()) || [];
   const brands = (await getFeaturedBrands()) || [];
-  const products = (await getFeaturedProducts()) || [];
+  const featuredProducts = (await getFeaturedProducts()) || [];
+  const productsOnSale = (await getProductsOnSale()) || [];
 
   return {
-    props: { categories, brands, products }
+    props: { categories, brands, featuredProducts, productsOnSale }
   }
 }
