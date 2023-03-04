@@ -10,13 +10,6 @@
     height: fit-content;
 }
 
-.emblaContainer {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    /* margin-left: calc(var(--slide-spacing) * -1); */
-}
-
 .emblaSlide {
     flex: 0 0 var(--slide-size);
     min-width: 0;
@@ -49,4 +42,19 @@
     height: 100%;
     object-fit: cover;
     object-position: 50% 90%;
+}
+
+.price {
+    font-size: 1.75em;
+    display: inline-block;
+}
+
+.price s {
+    color: rgb(139, 139, 139);
+}
+
+.salePrice {
+    font-size: 1.75em;
+    display: inline-block;
+    margin-right: 10px;
 }
