@@ -5,7 +5,7 @@ const ProductCard = ({ product }) => {
     return (
         <Link href={`./product/${product.slug}`} key={product.id}>
           <div className={styles.emblaSlide}>
-            <div className={styles.emblaSlideImage}>
+            <div className={styles.emblaSlideImgContainer}>
               <img src={product.mainPhoto.url} alt={product.name} className={styles.emblaSlideImg}/>
             </div>
             <h3>{product.name}</h3>
