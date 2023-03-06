@@ -124,6 +124,7 @@ export const getProductsOnSale = async () => {
         query ProductsOnSale {
             products(where: {isOnSale: true}) {
                 id
+                isOnSale
                 mainPhoto {
                     url
                 }
