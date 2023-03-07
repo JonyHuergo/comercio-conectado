@@ -67,6 +67,7 @@ export const getProducts = async () => {
                 edges {
                     node {
                         slug
+                        name
                     }
                 }
             }

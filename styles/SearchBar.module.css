@@ -1,0 +1,48 @@
+.searchBarContainer {
+    float: right;
+    position: relative;
+    width: 75%;
+}
+
+.searchBar {
+    height: 1.75rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.searchBarResults {
+    background-color: white;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    z-index: 50;
+    border: 2px solid black;
+    margin-top: 1rem;
+    max-height: 10rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.searchBarResult {
+    padding: 0.5rem 1rem;
+    font-size: 0.9em;
+}
+
+.searchBarResults::-webkit-scrollbar {
+    width: 10px;
+}
+
+.searchBarResults::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.searchBarResults::-webkit-scrollbar-thumb {
+    background: rgb(156, 156, 156);
+    border-radius: 10px;
+}
+
+.searchBarResultContainer:hover {
+    background-color: rgb(202, 202, 202);;
+}
