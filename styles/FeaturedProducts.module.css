@@ -1,8 +1,6 @@
-.embla {
-    --slide-spacing: 1rem;
-    --slide-size: 20%;
-    --slide-height: 19rem;
-    padding: 0px 0px 20px;
+.featured {
+    padding-bottom: 20px;
+    height: 700px;
     margin: auto;
     margin-top: 20px;
     width: 80%;
@@ -10,13 +8,11 @@
     height: fit-content;
 }
 
-.emblaContainer {
-    display: flex;
-    flex-direction: row;
-    height: auto;
+.featuredCarouselContainer {
+    padding: 30px 10px 70px 10px;
 }
 
-.carouselContainer {
-    padding: 70px 0;
+.featuredTitle {
+    font-size: 1.75em;
+    padding-top: 20px;
 }
-

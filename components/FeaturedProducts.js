@@ -31,11 +31,11 @@ const FeaturedProducts = ({ products }) => {
   return (
     <>
     
-    <div className={styles.embla}>
-      <h2>Productos Destacados</h2>
+    <div className={styles.featured}>
+      <h2 className={styles.featuredTitle}>Productos Destacados</h2>
       <Carousel
         responsive={responsive}
-        containerClass={styles.carouselContainer}
+        containerClass={styles.featuredCarouselContainer}
         showDots={true}
         ssr={true}
         arrows={false}
