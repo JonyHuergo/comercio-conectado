@@ -141,3 +141,25 @@ export const getProductsOnSale = async () => {
 
     return result.products;
 };
+
+export const getFilteredProducts = async (searchWord) => {
+    const query = gql`
+        query FilteredProducts($searchWord : String!) {
+            products(where: {name_contains: $searchWord}) {
+                id
+                isOnSale
+                mainPhoto {
+                    url
+                }
+                name
+                price
+                salePrice
+                slug
+            }
+        }
+    `
+
+    const result = await request(graphqlAPI, query, { searchWord });
+
+    return result.products;
+};

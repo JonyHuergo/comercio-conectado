@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import CloseIcon from '@mui/icons-material/Close'; */
 import Link from 'next/link';
 import styles from '../styles/SearchBar.module.css'
+import { useRouter, withRouter } from 'next/router'
 
 const SearchBar = ({ placeholder, data }) => {
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setwordEntered] = useState("");
+    const router = useRouter()
 
     const removeAccents = (str) => {
         return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -16,8 +18,8 @@ const SearchBar = ({ placeholder, data }) => {
         const searchWord = removeAccents(event.target.value.toLowerCase());
         setwordEntered(searchWord)
         const newFilter = data.filter((value) => {
-            const title = removeAccents(value.node.name.toLowerCase())
-            return title.includes(searchWord);
+            const name = removeAccents(value.node.name.toLowerCase());
+            return name.includes(searchWord);
         });
 
         if (searchWord === "") {
@@ -25,12 +27,20 @@ const SearchBar = ({ placeholder, data }) => {
         } else {
             setFilteredData(newFilter);
         }
-        console.log(filteredData)
     }
 
     const clearInput = () => {
         setFilteredData([]);
-        setwordEntered("")
+        setwordEntered("");
+    }
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            router.push({
+                pathname: '../search',
+                query: {word: wordEntered},
+            })
+        }
     }
 
     return (
@@ -41,6 +51,7 @@ const SearchBar = ({ placeholder, data }) => {
                 placeholder={placeholder}
                 onChange={handleFilter}
                 value={wordEntered}
+                onKeyDown={(e) => handleKeyDown(e)}
             />
             <div className='absolute right-2 top-2'>
                 {/* {wordEntered.length === 0 ?
@@ -67,4 +78,4 @@ const SearchBar = ({ placeholder, data }) => {
     );
 }
  
-export default SearchBar;
+export default withRouter(SearchBar);
