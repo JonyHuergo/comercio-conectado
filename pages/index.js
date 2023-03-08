@@ -13,12 +13,10 @@ export default function Home({ categories, brands, featuredProducts, productsOnS
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Navbar/>
         <Banner/>
         <FeaturedProducts products={featuredProducts}/>
         <ProductsOnSale products={productsOnSale}/>
         <FeaturedBrands brands={brands}/>
-        <Footer/>
       </main>
     </>
   )
