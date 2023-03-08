@@ -31,11 +31,11 @@ const ProductsOnSale = ({ products }) => {
   return (
     <div className={styles.saleSection}>
       <img src="/saleBanner.jpg" alt="sale banner" className={styles.saleBannerImg}/>
-      <div className={styles.embla}>
+      <div className={styles.saleSectionContent}>
         <h2 className={styles.saleSectionTitle}>Ofertas</h2>
         <Carousel
           responsive={responsive}
-          containerClass={styles.carouselContainer}
+          containerClass={styles.saleSectionCarouselContainer}
           showDots={true}
           ssr={true}
           arrows={false}
