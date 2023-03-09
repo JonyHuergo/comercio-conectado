@@ -6,3 +6,4 @@ export { default as FeaturedBrands } from './FeaturedBrands';
 export { default as Footer } from './Footer';
 export { default as CarouselCard } from './CarouselCard';
 export { default as ProductCard } from './ProductCard';
+export { default as ListedProducts } from './ListedProducts';
