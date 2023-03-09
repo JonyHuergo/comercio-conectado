@@ -1,9 +1,8 @@
 import Link from 'next/link'
-import styles from '../styles/ProductCard.module.css'
+import styles from '../styles/CarouselCard.module.css'
 
 const ProductCard = ({ product }) => {
     return (
-        <div className={styles.productCardContainer}>
         <Link href={`./product/${product.slug}`} key={product.id}>
           <div className={styles.productCard}>
             <div className={styles.productCardImgContainer}>
@@ -21,7 +20,6 @@ const ProductCard = ({ product }) => {
             </div>
           </div>
         </Link>
-        </div>
     );
 }
  
