@@ -5,9 +5,7 @@ import { getProductsOnSale } from '../services'
 export default function OnSale({ productsOnSale }) {
   return (
         <div className={styles.onSalePage}>
-            <div className={styles.onSalePageTitle}>
-                <h1></h1>
-            </div>
+            <div className={styles.onSalePageTitle}/>
             <div className={styles.listedProductsContainer}>
                 <ListedProducts products={productsOnSale}/>
             </div>
