@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from '../styles/Navbar.module.css'
 import SearchBar from "./SearchBar";
 import { getProducts } from '../services'
+import Link from 'next/link';
 /* import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close'; */
 
@@ -21,12 +22,14 @@ const Navbar = () => {
     return (
         <nav className={styles.navContainer}>
             <span>
+                <Link href={"/"}>
                 <img
                 src="/logo-2.png"
                 alt="Logo"
                 width={200}
                 heigth={100}
                 />
+                </Link>
             </span>
             <span>Ofertas</span>
             <span>Categorias</span>
