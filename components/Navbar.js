@@ -31,7 +31,7 @@ const Navbar = () => {
                 />
                 </Link>
             </span>
-            <span>Ofertas</span>
+            <span><Link href={"/onSale"}>Ofertas</Link></span>
             <span>Categorias</span>
             <span>{/* <input type="text" placeholder="Buscar" /> */}<SearchBar placeholder="Buscar productos" data={data} /></span>
             <span><i className="material-symbols-outlined">shopping_cart</i></span>
