@@ -1,5 +1,5 @@
 import styles from '../styles/FeaturedProducts.module.css'
-import ProductCard from './ProductCard'
+import CarouselCard from './CarouselCard'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -41,7 +41,7 @@ const FeaturedProducts = ({ products }) => {
         arrows={false}
       >
         {products.map( product => (
-          <ProductCard key={product.id} product={product} />
+          <CarouselCard key={product.id} product={product} />
         ))}
       </Carousel>
     </div>
