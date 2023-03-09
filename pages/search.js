@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router'
 import { getFilteredProducts } from "../services";
+import styles from '../styles/Search.module.css'
+import { ListedProducts } from "../components";
 
 const Search = () => {
     const [data, setData] = useState([]);
@@ -11,14 +13,16 @@ const Search = () => {
     useEffect(() => {
         getFilteredProducts(searchWord)
             .then((result) => setData(result))
-    }, []);
+    });
 
     return (
-        <div>
-            <h1>Search for: {searchWord}</h1>
-            {data.map( product => (
-                <p>{product.name}</p>
-            ))}
+        <div className={styles.searchPage}>
+            <div className={styles.listedProductsContainer}>
+                <div className={styles.searchPageTitle}>
+                    <h1>Resultados para: "<b>{searchWord}</b>"</h1>
+                </div>
+                <ListedProducts products={data}/>
+            </div>
         </div>
     );
 }
