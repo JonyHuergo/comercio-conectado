@@ -6,7 +6,8 @@
 
 .listedProductsContainer {
     background-color: white;
-    border-radius: 2%;
+    border: 2px solid black;
+    border-radius: 10px;
     width: 90%;
     margin: 0 auto;
     padding: 20px;
