@@ -5,6 +5,7 @@
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .imgContainer {
@@ -151,6 +152,7 @@
     border: 2px solid black;
     padding: 6px;
     border-radius: 10px;
+    min-width: 134px;
 }
 
 .quantityDesc span {
@@ -166,6 +168,50 @@
 
 .quantityDesc .num {
     border-right: 2px solid black;
+}
+
+.addToCart {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+}
+
+.addToCart:disabled {
+    pointer-events: none;
+}
+
+.addToCart:hover {
+    color: white;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.addToCart:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 @media screen and (max-width:800px) {

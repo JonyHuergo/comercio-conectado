@@ -38,6 +38,9 @@ const ProductDetail = ({ product }) => {
                   <span className={styles.num} onClick=""><b>0</b></span>
                   <span className={styles.plus} onClick=""><AiOutlinePlus/></span>
                 </p>
+                <div className={styles.buttons}>
+                  <button className={styles.addToCart}>AGREGAR AL CARRITO</button>
+                </div>
               </div>
             </div>
         </div>
