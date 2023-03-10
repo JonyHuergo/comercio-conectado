@@ -92,11 +92,20 @@
     margin-top: 30px;
 }
 
-.price .old-price,
-.product-price .old-price,
-.price .old-price {
-    color: gray;
-    text-decoration: line-through;
+.price {
+    margin: 0;
+    font-size: 1.75em;
+    display: inline-block;
+}
+
+.price s {
+    color: rgb(139, 139, 139);
+}
+
+.salePrice {
+    font-size: 1.75em;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .productDetailDesc .quantity {

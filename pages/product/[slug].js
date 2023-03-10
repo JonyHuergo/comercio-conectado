@@ -30,7 +30,13 @@ const ProductDetail = ({ product }) => {
               </div>
               <h4>Descripción: </h4>
               <p>{product.description}</p>
-              <p className={styles.price}>${product.price}</p>
+              {product.isOnSale ?
+                <span>
+                  <p className={styles.salePrice}><b>${product.salePrice}</b></p>
+                  <p className={styles.price}><s>${product.price}</s></p>
+                </span> :
+                <p className={styles.price}>${product.price}</p>
+              }
               <div className={styles.quantity}>
                 <h3>Cantidad: </h3>
                 <p className={styles.quantityDesc}>
