@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { getProducts, getProductDetails } from '../../services'
-import styles from '/styles/ProductDetail.module.css'
+import { getProducts, getProductDetails } from '../../services';
+import styles from '/styles/ProductDetail.module.css';
+import { AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 
 const ProductDetail = ({ product }) => {
   const [index, setIndex] = useState(-1);
@@ -30,6 +31,14 @@ const ProductDetail = ({ product }) => {
               <h4>Descripción: </h4>
               <p>{product.description}</p>
               <p className={styles.price}>${product.price}</p>
+              <div className={styles.quantity}>
+                <h3>Cantidad: </h3>
+                <p className={styles.quantityDesc}>
+                  <span className={styles.minus} onClick=""><AiOutlineMinus/></span>
+                  <span className={styles.num} onClick=""><b>0</b></span>
+                  <span className={styles.plus} onClick=""><AiOutlinePlus/></span>
+                </p>
+              </div>
             </div>
         </div>
       </div>

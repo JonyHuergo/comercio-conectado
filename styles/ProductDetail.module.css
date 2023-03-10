@@ -147,30 +147,25 @@
     transform: scale(1.1, 1.1)
 }
 
-.quantity-desc {
-    border: 1px solid gray;
+.quantityDesc {
+    border: 2px solid black;
     padding: 6px;
+    border-radius: 10px;
 }
 
-.quantity-desc span {
+.quantityDesc span {
     font-size: 16px;
     padding: 6px 12px;
+    padding-top: 12px;
     cursor: pointer;
 }
 
-.quantity-desc .minus {
-    border-right: 1px solid gray;
-    color: #f02d34;
+.quantityDesc .minus {
+    border-right: 2px solid black;
 }
 
-.quantity-desc .num {
-    border-right: 1px solid gray;
-    font-size: 20px;
-}
-
-.quantity-desc .plus {
-    color: rgb(49, 168, 49);
-
+.quantityDesc .num {
+    border-right: 2px solid black;
 }
 
 @media screen and (max-width:800px) {
