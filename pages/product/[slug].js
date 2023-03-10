@@ -1,8 +1,38 @@
+import { useState } from 'react';
 import { getProducts, getProductDetails } from '../../services'
+import styles from '/styles/ProductDetail.module.css'
 
 const ProductDetail = ({ product }) => {
+  const [index, setIndex] = useState(-1);
+
     return (
-        <h1>{product.name}</h1>
+      <div className={styles.productDetailPage} >
+        <div className={styles.productDetailContainer}>
+          <div className={styles.imgContainer}>
+            <div>
+              {index === -1 ?
+                <img src={product.mainPhoto.url} alt="Product Photo" className={styles.productDetailImg} /> :
+                <img src={product.photos[index].url} alt="Product Photo" className={styles.productDetailImg} />
+              }
+            </div>
+            <div className={styles.smallImgContainer}>
+              <img src={product.mainPhoto.url} alt="Another photo of this product" className={index === -1 ? styles.selectedImg : styles.smallImg} onMouseEnter={() => setIndex(-1)} />
+              {product.photos.map((photo, i) => (
+                <img src={photo.url} alt="Another photo of this product" className={i === index ? styles.selectedImg : styles.smallImg} onMouseEnter={() => setIndex(i)}/>
+              ))}
+            </div>
+          </div>
+          <div className={styles.productDetailDesc}>
+              <h1>{product.name}</h1>
+              <div className={styles.reviews}>
+
+              </div>
+              <h4>Descripción: </h4>
+              <p>{product.description}</p>
+              <p className={styles.price}>${product.price}</p>
+            </div>
+        </div>
+      </div>
     );
 }
  
