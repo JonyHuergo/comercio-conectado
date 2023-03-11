@@ -7,8 +7,7 @@ export const StateContext = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
 
-    let foundProduct;
-    let index;    
+    let foundProduct; 
 
     const addToCart = (product, quantity) => {
         const checkProductInCart = cartItems.find((item) => item.product.name === product.name);
@@ -44,8 +43,7 @@ export const StateContext = ({ children }) => {
     }    
 
     const toggleCartItemQuantity = (name, value) => {
-        foundProduct = cartItems.find((item) => item.product.name === name);
-        index = cartItems.findIndex((item) => item.product.name === name);   
+        foundProduct = cartItems.find((item) => item.product.name === name); 
 
         if (value === 'inc') {
             const updatedData = cartItems.map(item => (item.product.name === name ? { ...item, quantity: item.quantity + 1 } : item));
