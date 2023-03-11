@@ -176,7 +176,7 @@
 }
 
 .cartProductContainer {
-    max-height: 80%;
+    height: 80%;
     overflow: scroll;
     overflow-x: hidden;
 }
