@@ -11,7 +11,8 @@
 
 .cartContainer {
     height: 100vh;
-    width: 500px;
+    width: 550px;
+    padding-right: 10px;
     background-color: white;
     position: absolute;
     right: 0%;
@@ -47,4 +48,148 @@
 .cartHeading .heading {
     margin: 10px;
     padding-top: 3px;
+}
+
+.emptyCart {
+    margin-top: 50%;
+    height: fit-content;
+}
+
+.emptyCartSvg {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.emptyCartText {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.cartProduct {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: white;
+    display: flex;
+}
+
+.cartProduct:hover {
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.7);
+}
+
+.cartProductImg {
+    border-radius: 10px;   
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.cartProductInfo {
+    position: relative;
+    font-size: 1.25em;
+    margin-left: 10px;
+    flex-grow: 2;
+}
+
+.cartProductInfoBottom {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+.cartProductPrice {
+    position: absolute;
+    right: 20px;
+}
+
+.quantity {
+    width: fit-content;
+}
+
+.quantityDesc {
+    border: 2px solid black;
+    padding: 6px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    min-width: 134px;
+}
+
+.quantityDesc span {
+    font-size: 16px;
+    padding: 6px 12px;
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+.quantityDesc .minus {
+    border-right: 2px solid black;
+}
+
+.quantityDesc .num {
+    border-right: 2px solid black;
+}
+
+.cartProductInfoTop {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+.cartProductInfoTop h5 {
+    width: fit-content;
+    display: inline-block;
+}
+
+.removeItem {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    font-size: 24px;
+    color: #f02d34;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.cartBottom {
+    position: absolute;
+    bottom: 50px;
+    right: 5px;
+    width: 100%;
+    padding: 30px 65px;
+}
+
+.total h3 {
+    font-size: 22px;
+    display: inline;
+}
+
+.total h3:first-child {
+    position: absolute;
+    left: 20px;
+}
+
+.total h3:nth-child(2) {
+    position: absolute;
+    right: 20px;
+}
+
+.cartProductContainer {
+    max-height: 80%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.cartProductContainer::-webkit-scrollbar {
+    width: 10px;
+}
+
+.cartProductContainer::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.cartProductContainer::-webkit-scrollbar-thumb {
+    background: rgb(156, 156, 156);
+    border-radius: 10px;
 }

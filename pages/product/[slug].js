@@ -6,7 +6,19 @@ import { useStateContext } from '../../context/StateContext';
 
 const ProductDetail = ({ product }) => {
   const [index, setIndex] = useState(-1);
-  const {decreaseQuantity, increaseQuantity, quantity} = useStateContext();
+  const [quantity, setQuantity] = useState(1);
+  const {addToCart} = useStateContext();
+
+  const increaseQuantity = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  }
+
+  const decreaseQuantity = () => {
+    setQuantity((prevQuantity) => {
+      if (prevQuantity - 1 < 1) return 1;
+      return prevQuantity - 1;
+    });
+  }
 
     return (
       <div className={styles.productDetailPage} >
@@ -47,7 +59,7 @@ const ProductDetail = ({ product }) => {
                   <span className={styles.plus} onClick={increaseQuantity}><AiOutlinePlus/></span>
                 </p>
                 <div className={styles.buttons}>
-                  <button className={styles.addToCart}>AGREGAR AL CARRITO</button>
+                  <button className={styles.addToCart} onClick={() => addToCart(product, quantity)}>AGREGAR AL CARRITO</button>
                 </div>
               </div>
             </div>
