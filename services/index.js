@@ -163,3 +163,45 @@ export const getFilteredProducts = async (searchWord) => {
 
     return result.products;
 };
+
+
+export const getBrand = async (slug) => {
+  const query = gql`
+    query Brand($slug : String!) {
+        brand(where: {slug: $slug}) {
+            logo {
+            url
+            }
+            name
+            backgroundImage {
+                url
+            }            
+        }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug });
+
+  return result.brand;
+};
+
+export const getBrandProducts = async (slug) => {
+    const query = gql`
+        query BrandProducts($slug : String!) {
+            products(where: {brand: {slug: $slug}}) {
+                name
+                mainPhoto {
+                    url
+                }
+                isOnSale
+                price
+                salePrice
+                slug
+            }
+        }
+    `
+
+    const result = await request(graphqlAPI, query, { slug });
+
+    return result.products;
+};

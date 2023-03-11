@@ -1,0 +1,49 @@
+.brandPage {
+    background-color: rgb(109, 162, 223);
+    padding: 20px 0;
+    min-height: 100vh;
+}
+
+.listedProductsContainer {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+}
+
+.listedProductsContainer h1 {
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.brandPageBanner {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    border-radius: 20px;
+    width: 90%;
+    height: 545px;
+    margin: 30px auto;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.brandBackground {
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.brandLogo {
+    position: absolute;
+    bottom: calc(0% - 75px);
+    left: calc(50% - 75px);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
