@@ -8,3 +8,4 @@ export { default as CarouselCard } from './CarouselCard';
 export { default as ProductCard } from './ProductCard';
 export { default as ListedProducts } from './ListedProducts';
 export { default as ReviewsForm } from './ReviewsForm';
+export { default as Reviews } from './Reviews';

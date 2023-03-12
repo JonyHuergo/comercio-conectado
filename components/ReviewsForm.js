@@ -51,7 +51,7 @@ const ReviewsForm = ({ slug }) => {
 
     return (
         <div className={styles.reviewsFormContainer}>
-            <h3 className={styles.reviewsFormTitle}>Añadir comentario</h3>
+            <h3 className={styles.reviewsFormTitle}>Añadir reseña</h3>
             <div className="grid grid-cols-1 gap-4 mb-4">
                 <textarea
                     ref={contentEl}
@@ -85,7 +85,7 @@ const ReviewsForm = ({ slug }) => {
                 >
                     Publicar
                 </button>
-                {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">Comentario enviado y en espera de revisión</span>}
+                {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">Reseña enviada y en espera de revisión</span>}
             </div>
         </div>
     );

@@ -272,3 +272,18 @@ export const submitReview = async (obj) => {
 
   return result.json();
 };
+
+export const getReviews = async (slug) => {
+  const query = gql`
+    query GetReviews($slug:String!) {
+      reviews(where: {product: {slug:$slug}}){
+        name
+        content
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug });
+
+  return result.reviews;
+};
