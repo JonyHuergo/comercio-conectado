@@ -42,3 +42,7 @@
     display: inline-block;
     font-size: 0.75em;
 }
+
+.cart {
+    cursor: pointer;
+}

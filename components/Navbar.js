@@ -55,7 +55,7 @@ const Navbar = () => {
                 </div>
             </span>
             <span><SearchBar placeholder="Buscar productos" data={productData} /></span>
-            <span onClick={toggleCart}><i className="material-symbols-outlined">shopping_cart</i></span>
+            <span onClick={toggleCart} class={styles.cart}><i className="material-symbols-outlined">shopping_cart</i></span>
         </nav>
     );
 }
