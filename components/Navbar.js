@@ -44,9 +44,9 @@ const Navbar = () => {
                 </Link>
             </span>
             <span><Link href={"/onSale"}><b>Ofertas</b></Link></span>
-            <span class={styles.dropdown}>
+            <span className={styles.dropdown}>
                 <span><b>Categorias</b></span>
-                <div class={styles.dropdownContent}>
+                <div className={styles.dropdownContent}>
                     {categories.map((category) => (
                         <Link href={`/category/${category.slug}`}>
                             <p>{category.name}</p>
@@ -55,7 +55,7 @@ const Navbar = () => {
                 </div>
             </span>
             <span><SearchBar placeholder="Buscar productos" data={productData} /></span>
-            <span onClick={toggleCart} class={styles.cart}><i className="material-symbols-outlined">shopping_cart</i></span>
+            <span onClick={toggleCart} className={styles.cart}><i className="material-symbols-outlined">shopping_cart</i></span>
         </nav>
     );
 }
