@@ -4,7 +4,6 @@
 }
 
 .productCard {
-    flex: 0 0 20%;
     min-width: 0;
     position: relative;
     height: 28rem;
@@ -54,13 +53,35 @@
     padding-left: 1rem;
 }
 
-@media (max-width: 850px) {
-    .productCard {
-        width: 100%;
+@media (max-width: 1200px) {
+    .productCardContainer {
+        width: 26%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .productCardContainer {
+        width: 34%;
+    }
+}
+
+@media (max-width: 950px) {
+    .productCardContainer {
+        width: 90%;
     }
     .productCardImg {
         margin: auto;
         width: auto;
         object-position: 100% 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .productCardContainer {
+        width: 100%;
+    }
+    .productCardImg {
+        width: 100%;
+        object-position: 50% 0%;
     }
 }
