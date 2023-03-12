@@ -6,12 +6,26 @@ import Link from 'next/link';
 /* import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close'; */
 import { useStateContext } from '../context/StateContext';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
     const [productData, setproductData] = useState([]);
     const [categories, setCategories] = useState([]);
     const [searchBarOpen, setsearchBarOpen] = useState(false)
-    const {showCart, setShowCart} = useStateContext();
+    const {showCart, setShowCart, showSideMenu, setShowSideMenu} = useStateContext();
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowWidth(window.innerWidth);
+        }
+        
+        window.addEventListener("resize", handleResize);
+        
+        handleResize();
+        
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     useEffect(() => {
         getProducts()
@@ -23,12 +37,18 @@ const Navbar = () => {
             .then((result) => setCategories(result))
     }, []);
 
+
+
     const manageSearchBar = () => {
         searchBarOpen ? setsearchBarOpen(false) : setsearchBarOpen(true)
     };
 
     const toggleCart = () => {
         showCart ? setShowCart(false) : setShowCart(true)
+    }
+
+    const toggleSideMenu = () => {
+        showSideMenu ? setShowSideMenu(false) : setShowSideMenu(true)
     }
 
     return (
@@ -55,7 +75,10 @@ const Navbar = () => {
                 </div>
             </span>
             <span><SearchBar placeholder="Buscar productos" data={productData} /></span>
-            <span onClick={toggleCart} className={styles.cart}><i className="material-symbols-outlined">shopping_cart</i></span>
+            {windowWidth > 800 ?
+                <span onClick={toggleCart} className={styles.cart}><i className="material-symbols-outlined">shopping_cart</i></span> :
+                <span><button onClick={toggleSideMenu} className={styles.sideMenuButton}><GiHamburgerMenu/></button></span>
+            }
         </nav>
     );
 }

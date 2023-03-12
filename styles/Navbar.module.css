@@ -55,3 +55,48 @@
 .cart {
     cursor: pointer;
 }
+
+.sideMenuButton {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 1.5rem;
+    padding-top: 5px;
+    appearance: none;
+    background-color: transparent;
+    border: 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    min-width: 0;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.sideMenuButton:hover {
+    color: #fff;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.sideMenuButton:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+    .navContainer span:nth-child(n+2):nth-child(-n+4) {
+        display: none;
+    }
+    .navContainer {
+        grid-template-columns: 3fr 0.5fr;
+    }
+}
