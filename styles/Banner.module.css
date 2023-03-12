@@ -34,3 +34,19 @@
 .bannerText P {
     font-size: 1.5rem;
 }
+
+@media (max-width: 850px) {
+    .bannerText {
+        left: 5%;
+        right: 0%;
+        bottom: 0%;
+        width: 90%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .bannerText p {
+        display: none;
+    }
+}
