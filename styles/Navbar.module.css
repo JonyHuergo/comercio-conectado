@@ -1,6 +1,7 @@
 .navContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 2fr 0.5fr;
+    background-color: white;
 }
 
 .navContainer span {
