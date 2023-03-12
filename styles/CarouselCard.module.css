@@ -1,5 +1,4 @@
 .productCard {
-    flex: 0 0 20%;
     min-width: 0;
     position: relative;
     height: 28rem;
@@ -51,11 +50,18 @@
 
 @media (max-width: 850px) {
     .productCard {
-        width: 100%;
+        width: 95%;
     }
     .productCardImg {
         margin: auto;
         width: auto;
         object-position: 100% 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .productCardImg {
+        width: 100%;
+        object-position: 50% 0%;
     }
 }

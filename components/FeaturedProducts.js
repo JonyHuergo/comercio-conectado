@@ -39,6 +39,7 @@ const FeaturedProducts = ({ products }) => {
         showDots={true}
         ssr={true}
         arrows={false}
+        partialVisible={false}
       >
         {products.map( product => (
           <CarouselCard key={product.id} product={product} />
