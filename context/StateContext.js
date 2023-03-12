@@ -62,7 +62,7 @@ export const StateContext = ({ children }) => {
                 if (foundProduct.product.isOnSale) {
                     return prevTotalPrice - foundProduct.product.salePrice;
                 } else {
-                    return prevTotalPrice + foundProduct.product.price;
+                    return prevTotalPrice - foundProduct.product.price;
                 }
             });
         }
