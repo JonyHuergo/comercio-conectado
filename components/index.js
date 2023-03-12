@@ -7,3 +7,4 @@ export { default as Footer } from './Footer';
 export { default as CarouselCard } from './CarouselCard';
 export { default as ProductCard } from './ProductCard';
 export { default as ListedProducts } from './ListedProducts';
+export { default as ReviewsForm } from './ReviewsForm';

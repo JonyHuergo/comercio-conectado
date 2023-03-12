@@ -1,7 +1,7 @@
 .productDetailPage {
     background-color: rgb(109, 162, 223);
     /* background-color: white; */
-    padding: 20px 0;
+    padding: 20px auto;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -17,11 +17,12 @@
 
 .productDetailContainer {
     display: flex;
-    max-width: 90%;
+    width: 90%;
     gap: 40px;
     margin: auto;
     margin-top: 60px;
     color: black;
+    justify-content: center;
 }
 
 .productDetailImg {

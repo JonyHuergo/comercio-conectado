@@ -28,4 +28,12 @@ img {
   display: block;
 }
 
+input {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+textarea {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 /* ////////// */

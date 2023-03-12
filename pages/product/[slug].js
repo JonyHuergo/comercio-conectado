@@ -3,6 +3,7 @@ import { getProducts, getProductDetails } from '../../services';
 import styles from '/styles/ProductDetail.module.css';
 import { AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 import { useStateContext } from '../../context/StateContext';
+import { ReviewsForm } from '../../components';
 
 const ProductDetail = ({ product }) => {
   const [index, setIndex] = useState(-1);
@@ -63,6 +64,9 @@ const ProductDetail = ({ product }) => {
                 </div>
               </div>
             </div>
+        </div>
+        <div className={styles.productDetailContainer}>
+          <ReviewsForm slug={product.slug}/>
         </div>
       </div>
     );
