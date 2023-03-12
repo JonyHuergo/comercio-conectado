@@ -48,7 +48,7 @@ const Navbar = () => {
                 <span><b>Categorias</b></span>
                 <div className={styles.dropdownContent}>
                     {categories.map((category) => (
-                        <Link href={`/category/${category.slug}`}>
+                        <Link href={`/category/${category.slug}`} key={category.slug}>
                             <p>{category.name}</p>
                         </Link>
                     ))}
