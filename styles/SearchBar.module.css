@@ -12,6 +12,7 @@
 }
 
 .searchBarResults {
+    font-family: 'Josefin Sans', sans-serif;
     background-color: white;
     border-radius: 0.5rem;
     position: absolute;
