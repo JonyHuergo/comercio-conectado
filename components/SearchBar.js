@@ -61,12 +61,12 @@ const SearchBar = ({ placeholder, data }) => {
             </div>
             {filteredData.length != 0 && (
             <div className={styles.searchBarResults}>
-                {filteredData.slice(0, 15).map((post, index) => {
+                {filteredData.slice(0, 15).map((product, index) => {
                     return (
                         <div key={index} className={styles.searchBarResultContainer}>
-                        <Link href={`../product/${post.node.slug}`}>
+                        <Link href={`../product/${product.node.slug}`}>
                             <div className={styles.searchBarResult}>
-                                {post.node.name}
+                                {product.node.name}
                             </div>
                         </Link>
                         </div>

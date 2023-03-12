@@ -205,3 +205,57 @@ export const getBrandProducts = async (slug) => {
 
     return result.products;
 };
+
+export const getCategories = async () => {
+    const query = gql`
+        query Categories {
+            categories {
+                name
+                slug
+            }
+        }
+    `
+
+    const result = await request(graphqlAPI, query);
+
+    return result.categories;
+};
+
+export const getCategory = async (slug) => {
+  const query = gql`
+    query Category($slug : String!) {
+        category(where: {slug: $slug}) {
+            name
+            slug
+            backgroundImage {
+                url
+            }       
+        }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug });
+
+  return result.category;
+};
+
+export const getCategoryProducts = async (slug) => {
+    const query = gql`
+        query CategoryProducts($slug : String!) {
+            products(where: {category: {slug: $slug}}) {
+                name
+                mainPhoto {
+                    url
+                }
+                isOnSale
+                price
+                salePrice
+                slug
+            }
+        }
+    `
+
+    const result = await request(graphqlAPI, query, { slug });
+
+    return result.products;
+};

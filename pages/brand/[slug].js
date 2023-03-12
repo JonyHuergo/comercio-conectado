@@ -3,7 +3,6 @@ import styles from '../../styles/Brand.module.css'
 import { ListedProducts } from '../../components'
 
 const Brand = ({brand, brandProducts}) => {
-    /* const brand = brandData.brand; */
     return (
         <div className={styles.brandPage}>
             <div className={styles.brandPageBanner}>
@@ -31,7 +30,6 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const brands = (await getFeaturedBrands()) || [];
-  console.log(brands)
   return {
     paths: brands.map(({slug: slug}) => ({ params : {slug} })),
     fallback: false,
