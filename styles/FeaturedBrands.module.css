@@ -8,7 +8,6 @@
 
 .brands {
     display: grid;
-    grid: auto / auto auto auto auto;
 }
 
 .brandContainer {
@@ -39,4 +38,22 @@
 
 .brandsSectionTitle {
     font-size: 1.75em;
+}
+
+@media (min-width: 550px) {
+    .brands {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 850px) {
+    .brands {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .brands {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
