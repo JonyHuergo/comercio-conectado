@@ -43,9 +43,9 @@ const Navbar = () => {
                 />
                 </Link>
             </span>
-            <span><Link href={"/onSale"}>Ofertas</Link></span>
+            <span><Link href={"/onSale"}><b>Ofertas</b></Link></span>
             <span class={styles.dropdown}>
-                <span>Categorias</span>
+                <span><b>Categorias</b></span>
                 <div class={styles.dropdownContent}>
                     {categories.map((category) => (
                         <Link href={`/category/${category.slug}`}>
