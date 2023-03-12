@@ -46,5 +46,9 @@
 }
 
 .searchBarResultContainer:hover {
-    background-color: rgb(202, 202, 202);;
+    background-color: rgb(202, 202, 202);
+}
+
+.searchBarResult:hover {
+    color: black;
 }
