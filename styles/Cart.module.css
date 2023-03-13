@@ -193,3 +193,16 @@
     background: rgb(156, 156, 156);
     border-radius: 10px;
 }
+
+@media (max-width: 550px) {
+    .cartContainer {
+        width: 100%;
+        border-left: 2px solid transparent;
+    }
+    .cartProduct {
+        height: 20%;
+    }
+    .cartProductImgContainer {
+        display: none;
+    }
+}

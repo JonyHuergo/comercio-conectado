@@ -28,10 +28,12 @@ const Cart = () => {
         <div className={styles.cartProductContainer}>
           {cartItems.length >= 1 && cartItems.map((item) => (
             <div className={styles.cartProduct} key={item.product.id}>
-              <img src={item.product.mainPhoto.url} className={styles.cartProductImg} />
+              <div className={styles.cartProductImgContainer}>
+                <img src={item.product.mainPhoto.url} className={styles.cartProductImg} />
+              </div>
               <div className={styles.cartProductInfo}>
                 <div className={styles.cartProductInfoTop}>
-                  <h5>{item.product.name}</h5>
+                  <Link href={`/product/${item.product.slug}`}><h5 onClick={() => setShowCart(false)}>{item.product.name}</h5></Link>
                   <button
                     type="button"
                     className={styles.removeItem}

@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
-import { TiDeleteOutline } from 'react-icons/ti';
+import { MdOutlineShoppingCart } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { BsPercent } from 'react-icons/bs';
+import { BsPercent, BsCart3 } from 'react-icons/bs';
 import { TbCategory2 } from 'react-icons/tb';
 import { RxMagnifyingGlass } from 'react-icons/rx';
 import { useStateContext } from '../context/StateContext';
@@ -16,7 +15,7 @@ const SideMenu = () => {
   const [showSearchBar, setShowSearchBar] = useState(false);
   const [productData, setproductData] = useState([]);
   const [categories, setCategories] = useState([]);
-  const { setShowSideMenu } = useStateContext();
+  const { setShowSideMenu, showCart, setShowCart } = useStateContext();
 
   const toggleShowCategories = () => {
     showCategories ? setShowCategories(false) : setShowCategories(true)
@@ -24,6 +23,15 @@ const SideMenu = () => {
 
   const toggleShowSearchBar = () => {
     showSearchBar ? setShowSearchBar(false) : setShowSearchBar(true)
+  }
+
+  const toggleCart = () => {
+    if(showCart) {
+      setShowCart(false);
+    } else {
+      setShowSideMenu(false);
+      setShowCart(true);
+    }
   }
 
   useEffect(() => {
@@ -41,6 +49,7 @@ const SideMenu = () => {
       <div className={styles.sideMenu}>
         <div className={styles.buttonsContainer}>
             <button onClick={() => setShowSideMenu(false)} className={styles.sideMenuButton}><GiHamburgerMenu/></button>
+            <button onClick={toggleCart} className={styles.sideMenuButton}><MdOutlineShoppingCart/></button>
             <Link href={"/onSale"}><button onClick={() => setShowSideMenu(false)} className={styles.sideMenuButton}><BsPercent/></button></Link>      
             <span className={styles.dropdown}>
                 <button onClick={toggleShowSearchBar} className={styles.sideMenuButton}><RxMagnifyingGlass/></button>
