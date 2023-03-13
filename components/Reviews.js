@@ -23,7 +23,7 @@ const Reviews = ({slug}) => {
                 {reviews.length > 1 ? "Reseñas" : "Reseña" }
             </h3>
                 {reviews.map((review, index) => (
-                    <Review index={index} review={review}/>
+                    <Review key={index} review={review}/>
                 ))}
             </div>
         )}
