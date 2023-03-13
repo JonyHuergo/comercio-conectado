@@ -25,7 +25,7 @@ const ProductDetail = ({ product }) => {
       <div className={styles.productDetailPage} >
         <div className={styles.productDetailContainer}>
           <div className={styles.imgContainer}>
-            <div>
+            <div className={styles.largeImgContainer}>
               {index === -1 ?
                 <img src={product.mainPhoto.url} alt="Product Photo" className={styles.productDetailImg} /> :
                 <img src={product.photos[index].url} alt="Product Photo" className={styles.productDetailImg} />
@@ -65,7 +65,7 @@ const ProductDetail = ({ product }) => {
               </div>
             </div>
         </div>
-        <div className={styles.productDetailContainer}>
+        <div className={styles.productReviewContainer}>
           <ReviewsForm slug={product.slug}/>
           <Reviews slug={product.slug}/>
         </div>

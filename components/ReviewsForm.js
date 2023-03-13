@@ -57,15 +57,15 @@ const ReviewsForm = ({ slug }) => {
                     ref={contentEl}
                     className={styles.content}
                     name="content"
-                    placeholder="Content"
+                    placeholder="Escribi tu reseña"
                 />
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+            <div className={styles.nameEmailContainer}>
                 <input
                     type="text"
                     ref={nameEl}
                     className={styles.name}
-                    placeholder="Name"
+                    placeholder="Nombre"
                     name="name"
                 />
                 <input
@@ -83,7 +83,7 @@ const ReviewsForm = ({ slug }) => {
                     onClick={handleReviewSubmission}
                     className={styles.publish}
                 >
-                    Publicar
+                    PUBLICAR
                 </button>
                 {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">Reseña enviada y en espera de revisión</span>}
             </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getReviews } from '../services';
 import Review from './Review';
-import styles from '/styles/ReviewsForm.module.css';
+import styles from '/styles/Reviews.module.css';
 
 
 const Reviews = ({slug}) => {
@@ -16,7 +16,7 @@ const Reviews = ({slug}) => {
     return (
          <>
         {reviews.length > 0 && (
-            <div className={styles.reviewsFormContainer} /* className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8" */>
+            <div className={styles.reviewsContainer}>
             <h3 className="text-xl mb-8 font-semibold border-b pb-4">
                 {reviews.length}
                 {' '}

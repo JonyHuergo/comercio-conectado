@@ -24,6 +24,7 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    background-color: rgb(230, 230, 230);
 }
 
 .content:focus {
@@ -41,6 +42,7 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    background-color: rgb(230, 230, 230);
 }
 
 .name:focus {
@@ -58,6 +60,7 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    background-color: rgb(230, 230, 230);
 }
 
 .email:focus {
@@ -102,4 +105,13 @@
 .publish:active {
     box-shadow: none;
     transform: translateY(0);
+}
+
+.nameEmailContainer {
+    margin: 10px auto;
+}
+
+.nameEmailContainer input {
+    margin: 5px auto;
+    height: 35px;
 }
